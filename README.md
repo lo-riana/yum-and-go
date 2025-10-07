@@ -70,3 +70,7 @@ Structure
 - `src/components/Groceries.*` — courses + export CSV/PDF
 - `src/contexts/*` — états utilisateur/auth
 - `src/utils/spoonacularApi.js` — API + mock
+
+Déploiement
+---------
+https://yum-and-go.vercel.app/

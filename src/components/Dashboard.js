@@ -10,7 +10,6 @@ const Dashboard = () => {
   const { user } = useAuth();
   const { mealPlan, groceryList } = useUser();
 
-  // Get planned days count
   const getPlannedDaysCount = () => {
     const today = new Date();
     let count = 0;
@@ -25,12 +24,10 @@ const Dashboard = () => {
     return count;
   };
 
-  // Get grocery items count
   const getGroceryItemsCount = () => {
     return groceryList.length;
   };
 
-  // Get grocery items preview
   const getGroceryPreview = () => {
     if (groceryList.length === 0) return 'No items yet';
     const items = groceryList.slice(0, 2).map(item => typeof item === 'string' ? item : item.name || item.ingredient);

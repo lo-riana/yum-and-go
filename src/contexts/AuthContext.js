@@ -24,7 +24,6 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = (email, password) => {
-    // Simple authentication - in a real app, this would be an API call
     const users = JSON.parse(localStorage.getItem('yumgo_users') || '[]');
     const foundUser = users.find(u => u.email === email && u.password === password);
     

@@ -1,19 +1,14 @@
 import axios from 'axios';
-
-// API key is now loaded from environment variables (.env file)
-// This is more secure than hardcoding the key in the source code
 const API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY;
 
-// Dev-only visibility: confirm whether a key is present without exposing it
 if (process.env.NODE_ENV !== 'production') {
-  // eslint-disable-next-line no-console
   console.info(
     `[Spoonacular] API key ${API_KEY ? 'detected' : 'missing (using mock data)'}`
   );
 }
 const BASE_URL = 'https://api.spoonacular.com/recipes';
 
-// For demo purposes, we'll use mock data when API key is not available
+// Use mock data when API key is not available
 const MOCK_RECIPES = [
   {
     id: 1,

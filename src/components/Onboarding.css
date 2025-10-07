@@ -1,0 +1,315 @@
+.onboarding-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background: var(--beige);
+}
+
+/* Hero Section */
+.onboarding-hero {
+  position: relative;
+  padding: 56px 20px 32px; /* a bit less bottom padding to avoid collision */
+  text-align: center;
+  background: var(--gradient-primary);
+  color: var(--black);
+}
+
+/* Playful background decorations */
+.hero-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.decor-icon {
+  position: absolute;
+  opacity: 0.25;
+  color: var(--coral);
+}
+
+/* Ensure imported SVGs can be tinted by CSS */
+.decor-icon svg path,
+.decor-icon svg circle,
+.decor-icon svg rect,
+.decor-icon svg polygon {
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+.decor-mint { color: var(--mint); }
+.decor-coral { color: var(--coral); }
+.decor-tiffany { color: var(--tiffany); }
+.decor-periwinkle { color: var(--periwinkle); }
+
+.hero-content {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--black);
+  margin: 0 0 16px 0;
+  letter-spacing: -0.5px;
+}
+
+.hero-description {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0 0 24px 0;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.hero-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+}
+
+.feature-icon {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+/* Preferences Section */
+.preferences-section {
+  flex: 1;
+  background: var(--white);
+  border-radius: 30px 30px 0 0;
+  padding: 30px 20px 20px;
+  margin-top: 16px; /* ensure it doesn't overlap hero */
+  position: relative;
+  z-index: 2;
+}
+
+.preferences-intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.preferences-intro h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0 0 8px 0;
+  letter-spacing: -0.3px;
+}
+
+.preferences-intro p {
+  font-size: 14px;
+  color: var(--gray);
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.preference-group {
+  margin-bottom: 32px;
+}
+
+.preference-group h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0 0 16px 0;
+  text-align: left;
+}
+
+.diet-options {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.diet-btn {
+  flex: 1;
+  padding: 16px 20px;
+  border: 2px solid #F0F0F0;
+  background: var(--white);
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--gray);
+  min-width: 80px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.diet-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.diet-btn.active {
+  background: var(--tiffany);
+  border-color: var(--tiffany);
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(64, 224, 208, 0.3);
+}
+
+.allergies-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.allergy-btn {
+  padding: 12px 16px;
+  border: 2px solid #F0F0F0;
+  background: var(--white);
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--gray);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.allergy-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.allergy-btn.active {
+  background: var(--jasmine);
+  border-color: var(--jasmine);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+.allergy-btn.add-btn {
+  background: var(--jasmine);
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(204, 204, 255, 0.3);
+}
+
+.allergy-btn.custom {
+  background: var(--jasmine);
+  border-color: var(--jasmine);
+  color: var(--black);
+  box-shadow: 0 4px 16px rgba(255, 248, 220, 0.5);
+}
+
+.meals-options {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.meal-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+  padding: 16px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  background: var(--white);
+  border: 2px solid #F0F0F0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.meal-option:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.meal-option input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 8px;
+  accent-color: var(--tiffany);
+}
+
+.meal-number {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.save-btn {
+  width: 100%;
+  padding: 18px 24px;
+  background: black;
+  color: var(--white);
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 20px 0;
+  letter-spacing: 0.3px;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(64, 224, 208, 0.4);
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--gray);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-link button {
+  background: none;
+  border: none;
+  color: var(--tiffany);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.login-link button:hover {
+  color: var(--mint-green);
+}
+
+@media (max-width: 600px) {
+  .onboarding-container {
+    padding: 30px 20px;
+    margin: 10px;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+  }
+  
+  .diet-options,
+  .allergy-options,
+  .meals-options {
+    justify-content: center;
+  }
+
+  /* Make sure the hero decorations don't overwhelm on small screens */
+  .decor-icon {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+}

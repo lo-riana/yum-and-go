@@ -103,7 +103,7 @@ const Recipes = () => {
     if (preferences.diet === 'vegetarian' && !recipe.vegetarian) return false;
     if (preferences.diet === 'vegan' && !recipe.vegan) return false;
     
-    // Check allergies (simplified check)
+    // Check allergies 
     if (preferences.allergies.includes('Gluten') && !recipe.glutenFree) return false;
     
     return true;
